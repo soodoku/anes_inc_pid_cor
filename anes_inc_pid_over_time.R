@@ -60,6 +60,10 @@ inc_party_cor_region <- anes %>%
 
 print(inc_party_cor, n = 100)
 print(inc_party_cor_region, n = 100)
+print(inc_party_cor %>% 
+        filter(VCF0004 > 1978) %>% 
+        arrange(inc_party_cor), 
+      n = 40)
 
 ggplot(anes, aes(x = income, y = party)) +
   stat_smooth(
